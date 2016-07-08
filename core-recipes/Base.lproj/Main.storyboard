@@ -64,6 +64,7 @@
                                         <connections>
                                             <outlet property="recipeImg" destination="kr7-D5-Pwv" id="Ybs-jV-pFT"/>
                                             <outlet property="recipeTitle" destination="GNj-pQ-faN" id="OHM-hv-31s"/>
+                                            <segue destination="4s3-Hh-kxI" kind="show" identifier="showRecipeDetail" id="heZ-n3-VWB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -92,6 +93,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1057" y="337"/>
+        </scene>
+        <!--Show Detail-->
+        <scene sceneID="p2V-AX-2il">
+            <objects>
+                <viewController id="4s3-Hh-kxI" customClass="ShowDetail" customModule="core_recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kWj-R0-MnO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Elz-PH-cEc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yxn-zh-4yb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yV-7y-Rf7">
+                                <rect key="frame" x="20" y="101" width="560" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7yV-7y-Rf7" firstAttribute="trailing" secondItem="yxn-zh-4yb" secondAttribute="trailingMargin" id="11j-9v-qQr"/>
+                            <constraint firstItem="7yV-7y-Rf7" firstAttribute="leading" secondItem="yxn-zh-4yb" secondAttribute="leadingMargin" id="Na0-rA-IWL"/>
+                            <constraint firstItem="7yV-7y-Rf7" firstAttribute="top" secondItem="kWj-R0-MnO" secondAttribute="bottom" constant="37" id="RPC-gG-QVr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recipeTitle" destination="7yV-7y-Rf7" id="z3g-mc-0X7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hg5-aD-cgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1445" y="1083"/>
         </scene>
         <!--Create RecipeVC-->
         <scene sceneID="rVA-yi-iPm">

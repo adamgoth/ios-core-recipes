@@ -57,6 +57,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.count
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "showRecipeDetail" {
+            let controller = segue.destinationViewController as! ShowDetail
+            let indexPath = self.tableView.indexPathForSelectedRow
+            controller.selectedRecipe = recipes[indexPath!.row]
+        }
+    }
 
 }
 
